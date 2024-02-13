@@ -1,5 +1,65 @@
-</script><script src="https://weblocks.io/library.js"></script>
+var childs_name, age, gender, city, select, checkbox, input, name, budget, email, phone;
+var we_tabs_next_button = '[bloc=next-step]';
+var we_tabs_prev_button = '[bloc=prev-step]';
+var we_tabs_active_class = 'active';
 
-<script>
-var student,childs_name,age,study,gender,city,select,checkbox,steps,we_activeTab,we_indexOfActiveTab,we_indexOfNextTab,we_indexOfPrevTab,we_prevTab,we_amountOfTabs,nextTab,we_tabs_next_button="[bloc=next-step]",we_tabs_prev_button="[bloc=prev-step]",we_tabs_active_class="active",tabList=["student"];function openTab(t){var a="a[data-w-tab="+t;t="div[data-w-tab="+t,$(t).siblings().removeClass("w--tab-active"),$(t).addClass("w--tab-active"),$(a).siblings("a").removeClass("w--current"),$(a).addClass("w--current")}openTab(tabList[0]),$(we_tabs_next_button).on("click",(function(){var t=$(".w--tab-active").attr("data-w-tab"),a=tabList.indexOf(t),e=(tabList[a+1],tabList.length),b=$(".w--tab-active").attr("next-tab");openTab(b),void 0!==(b=$(".w--tab-active").attr("next-tab"))&&!1!==b?$(we_tabs_next_button).addClass(we_tabs_active_class):$(we_tabs_next_button).removeClass(we_tabs_active_class),e>1&&$(we_tabs_prev_button).addClass(we_tabs_active_class)})),$(we_tabs_prev_button).on("click",(function(){var t=$(".w--tab-active").attr("data-w-tab"),a=tabList.indexOf(t),e=(tabList[a-1],$(".w--tab-active").attr("prev-tab"));a>0&&(openTab(e),$(we_tabs_next_button).addClass(we_tabs_active_class)),a<=1?$(we_tabs_prev_button).removeClass(we_tabs_active_class):$(we_tabs_prev_button).addClass(we_tabs_active_class)})),$("[name=childs_name]").on("input",(function(){childs_name=getValueFromInput("childs_name"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=childs_name]").parent("label.w-radio").on("click",(function(){clickedRadioButtonValue=$("input",this).val(),childs_name=getValueFromInput("childs_name"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=age]").on("input",(function(){age=getValueFromInput("age"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=age]").parent("label.w-radio").on("click",(function(){clickedRadioButtonValue=$("input",this).val(),age=getValueFromInput("age"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=gender]").on("input",(function(){gender=getValueFromInput("gender"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=gender]").parent("label.w-radio").on("click",(function(){clickedRadioButtonValue=$("input",this).val(),gender=getValueFromInput("gender"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=gender]").on("input",(function(){gender=getValueFromInput("gender"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=gender]").parent("label.w-radio").on("click",(function(){clickedRadioButtonValue=$("input",this).val(),gender=getValueFromInput("gender"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=city]").on("input",(function(){city=getValueFromInput("city"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=city]").parent("label.w-radio").on("click",(function(){clickedRadioButtonValue=$("input",this).val(),city=getValueFromInput("city"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=select]").on("input",(function(){select=getValueFromInput("select"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=select]").parent("label.w-radio").on("click",(function(){clickedRadioButtonValue=$("input",this).val(),select=getValueFromInput("select"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=checkbox]").on("input",(function(){checkbox=getValueFromInput("checkbox"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[name=checkbox]").parent("label.w-radio").on("click",(function(){clickedRadioButtonValue=$("input",this).val(),checkbox=getValueFromInput("checkbox"),nextTab="study",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=study]")).attr("prev-tab",we_activeTab)})),$("[bloc=next-step]").on("click",(function(){"study"==$(".w--tab-active").attr("data-w-tab")&&(nextTab="steps",we_activeTab=$(".w--tab-active").attr("data-w-tab"),we_indexOfActiveTab=tabList.indexOf(we_activeTab),we_indexOfNextTab=we_indexOfActiveTab+1,we_prevTab=tabList[we_indexOfPrevTab=we_indexOfActiveTab-1],we_amountOfTabs=tabList.length,we_indexOfNextTab<we_amountOfTabs?tabList[we_indexOfNextTab]=nextTab:tabList.push(nextTab),$(we_tabs_next_button).addClass(we_tabs_active_class),$(".w--tab-active").attr("next-tab",nextTab),$($("[data-w-tab=steps]")).attr("prev-tab",we_activeTab))})),$("[bloc=next-step]").on("click",(function(){"steps"==$(".w--tab-active").attr("data-w-tab")&&$("[bloc=step-buttons]").css({display:"none "})})),$("[bloc=prev-step]").on("click",(function(){"study"==$(".w--tab-active").attr("data-w-tab")&&$("[bloc=step-buttons]").css({display:"flex "})}));
-</script>
+var we_activeTab, we_indexOfActiveTab, we_indexOfNextTab, we_indexOfPrevTab, we_prevTab, we_amountOfTabs, nextTab;
+var tabList = ['student'];
+
+openTab(tabList[0]);
+
+$(we_tabs_next_button).on("click", function () {
+  // Проверяем, есть ли заполненные данные в переменных
+  if (childs_name && age && gender && city && select && checkbox && input && name && budget && email && phone) {
+    var activeTab = $(".w--tab-active").attr("data-w-tab");
+    var indexOfActiveTab = tabList.indexOf(activeTab);
+    var indexOfNextTab = indexOfActiveTab + 1;
+    var nextTab = tabList[indexOfNextTab];
+    var amountOfTabs = tabList.length;
+    var attrNextTab = $('.w--tab-active').attr('next-tab');
+
+    openTab(attrNextTab);
+
+    attrNextTab = $('.w--tab-active').attr('next-tab');
+
+    if (typeof attrNextTab !== 'undefined' && attrNextTab !== false) {
+      $(we_tabs_next_button).addClass(we_tabs_active_class);
+    } else {
+      $(we_tabs_next_button).removeClass(we_tabs_active_class);
+    }
+
+    if (amountOfTabs > 1) {
+      $(we_tabs_prev_button).addClass(we_tabs_active_class);
+    }
+  }
+});
+
+$(we_tabs_prev_button).on("click", function () {
+  var activeTab = $(".w--tab-active").attr("data-w-tab");
+  var indexOfActiveTab = tabList.indexOf(activeTab);
+  var indexOfPrevTab = indexOfActiveTab - 1;
+  var prevTab = tabList[indexOfPrevTab];
+
+  var attrPrevTab = $('.w--tab-active').attr('prev-tab');
+
+  if (indexOfActiveTab > 0) {
+    openTab(attrPrevTab);
+    $(we_tabs_next_button).addClass(we_tabs_active_class);
+  }
+
+  if (indexOfActiveTab <= 1) {
+    $(we_tabs_prev_button).removeClass(we_tabs_active_class);
+  } else {
+    $(we_tabs_prev_button).addClass(we_tabs_active_class);
+  }
+});
+
+function openTab(tab) {
+  var tab_link = "a[data-w-tab=" + tab;
+  tab = "div[data-w-tab=" + tab;
+
+  $(tab).siblings().removeClass("w--tab-active");
+  $(tab).addClass("w--tab-active");
+  $(tab_link).siblings("a").removeClass("w--current");
+  $(tab_link).addClass("w--current");
+}
